@@ -1,0 +1,101 @@
+/* 
+https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Full Screen React Components)
+ */
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        4.3 Work
+        4.4 Services
+        4.5 Contact
+        4.6 Footer
+    5. Media Queries
+////////////////////////*/
+
+/* Global styles */
+:root {
+  --first-clr: red;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background-color: red;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+body {
+  font-size: 16px;
+  background-color: whitesmoke;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+main {
+  flex-grow: 1;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Remove the typical button styling on Mac
+For these buttons a background-color and color must be defined */
+button {
+  /* Remove background-color and color if required */
+  background-color: #bbb;
+  color: #222;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+/* Reusables  */
+.outer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Row = width */
+  justify-content: center;
+  background-color: #bbb;
+}
+
+.inner-container {
+  flex: 0 1 1000px;
+  display: flex;
+  flex-direction: column; /* Column = height */
+  align-items: center;
+  background-color: whitesmoke;
+  margin-inline: 20px;
+  justify-content: center;
+}
